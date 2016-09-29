@@ -63,8 +63,8 @@ class HangpersonApp < Sinatra::Base
   
   get '/win' do
     ### YOUR CODE HERE ###
-    redirect '/show' if @game.check_win_or_lose!=:win
     redirect '/new' if @game.word.empty?
+    redirect '/show' if @game.check_win_or_lose!=:win
     erb :win # You may change/remove this line
   end
   
